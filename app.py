@@ -9,15 +9,14 @@ from linebot.exceptions import (
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
-import os, dotenv
+import os
  
 app = Flask(__name__)
  
 # 環境変数取得
 # LINE Developers: アクセストークン/ChannelSecret
-dotenv.load_dotenv()
-CHANNEL_ACCESS_TOKEN = os.environ["XRzSUfoGJbX0k+MXADXfz2AagQXJMjUP69HXRZDQvVTq6qW7xUQi44QMmIBQrQhV1cEvTlgUXjaHMM1PlO0XaENgJRRoqyQjXC33L7f3upRS2CHOcrBOAUEx6893hxuvkAzMzUNURDWXhCb1Inj8gAdB04t89/1O/w1cDnyilFU="]
-CHANNEL_SECRET = os.environ["32bffe0a9a78f6b47a2b02f4c2175d21"]
+CHANNEL_ACCESS_TOKEN = "XRzSUfoGJbX0k+MXADXfz2AagQXJMjUP69HXRZDQvVTq6qW7xUQi44QMmIBQrQhV1cEvTlgUXjaHMM1PlO0XaENgJRRoqyQjXC33L7f3upRS2CHOcrBOAUEx6893hxuvkAzMzUNURDWXhCb1Inj8gAdB04t89/1O/w1cDnyilFU="
+CHANNEL_SECRET = "32bffe0a9a78f6b47a2b02f4c2175d21"
  
 line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(CHANNEL_SECRET)
